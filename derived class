@@ -1,0 +1,680 @@
+derived class package Management;
+
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class MMderivedClass extends MMbaseclass
+{
+	  @Test
+	    public void login() throws InterruptedException, EncryptedDocumentException, IOException {
+	        
+	        String[][] data = Exeldata.readDataFromExcel(1);
+	        
+	        for (int i = 1; i < data.length; i++) { 
+	        driver.get("http://192.168.0.149:8086/login");
+	   
+	        WebElement usernameField =  driver.findElement(By.name("username"));
+	        usernameField.clear();
+	        usernameField.sendKeys(data[1][0]);
+	        
+	        WebElement passwordField = driver.findElement(By.name("password"));
+	        passwordField.clear();
+	        passwordField.sendKeys(data[1][1]);
+	        
+	        
+	        String str = JOptionPane.showInputDialog("Enter your captha");
+	        driver.findElement(By.id("textBox")).sendKeys(str);
+          
+	        driver.findElement(By.id("submit")).click();
+          Thread.sleep(2000);
+         
+         
+          taskmanage();
+          comminvest();
+
+          
+          updates(); 
+          fieldvisit(data[i][2]);
+          remarks(data[i][3]);
+          needmet(data[i][4]);
+          done(data[i][5]);
+        
+       */   
+          
+          master();
+          
+         
+      
+
+          String[][] data11 = Exeldata.readDataFromExcel(11);
+	        
+         
+          
+          masterid();
+          addid();
+          depid(data11[19][0]);
+          depdis(data11[19][1]);
+          add();
+          
+          
+          
+         addid(); 
+         Assertnum(data11[1][0]);
+  	     Assertdisp(data11[1][1]);
+  	     add0();
+  	  	
+  	     addid();
+  	     brach(data11[2][0]);
+  	     branchdisp(data11[2][1]);
+  	 	 add2();
+  	    	  
+         addid();
+         Borewellid(data11[3][0]);
+         borewelldisp(data11[3][1]);
+         add3();
+           
+         addid();
+         compid(data11[4][0]);
+         compdisp(data11[4][1]);
+         add5();
+    
+         addid();
+         devid(data11[5][0]);
+         devdisp(data11[5][1]);
+         add7();
+            
+         addid();
+         dmaid(data11[6][0]);
+         dmadisp(data11[6][1]);
+         add8();
+            
+         addid();
+         empid(data11[7][0]);
+         empdisp(data11[7][1]);
+         add9();
+          
+         addid();
+         HAndpumpid(data11[8][0]);
+         HAndpumpdisp(data11[8][1]);
+         add11();
+            
+         addid();
+         pipeid(data11[9][0]);
+         pipedisp(data11[9][1]);
+         add12();
+         
+         addid();
+         inwardid(data11[10][0]);
+         inwarddisp(data11[10][1]);
+         add13();
+            
+         addid();
+         spareid(data11[11][0]);
+         sparedisp(data11[11][1]);
+         add14();
+           
+         addid();
+         toolid(data11[12][0]);
+         toolsidp(data11[12][1]);
+         add16();
+            
+         addid();
+         leakageid(data11[13][0]);
+         leakagedisp(data11[13][1]);
+         add18();
+            
+         addid();
+         meterid(data11[14][0]);
+         meterdisp(data11[14][1]);
+         add19();
+            
+         addid();
+         pumpid(data11[15][0]);
+         pumpdisp(data11[15][1]);
+         add20();
+             
+         addid();
+         stockid(data11[16][0]);
+         stockdisp(data11[16][1]);
+         add21();
+            
+         addid();
+         vehicleid(data11[17][0]);
+         vehicledisp(data11[17][1]);
+         add22();
+            
+         addid();
+         wardid(data11[18][0]);
+         warddisp(data11[18][1]);
+         add23();
+         
+         addid();
+         hsncodeid(data11[21][0]);
+         hsncodediscp(data11[21][1]);
+         add10();
+         
+         addid();
+         itmStatingnum(data11[22][0]);
+         itemdisp(data11[22][1]);
+         add17();
+         
+         
+         addid();
+         SuplierSDtartNum(data11[23][0]);
+         Suppdis(data11[23][1]);
+         add15() ;
+    
+         addid();
+         catStarNum(data11[20][0]);
+         catdisp(data11[20][1]);
+
+
+	  
+      
+         
+         
+          String[][] data12 = Exeldata.readDataFromExcel(12);	        
+	      for (int y=1;y < data12.length; y++) { 
+          department();
+          depname(data12[y][0]);
+          submit();
+	      }
+        
+     
+        
+          
+          String[][] data13 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=1;u <9; u++) { 
+          departmentId() ;
+          depname1(data13[u][1]);
+          bidgectIdNum(data13[u][2]);
+          bidgectDisc(data13[u][3]);
+          add1();
+	      }
+	      
+  
+          
+          String[][] dataa13 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=11;u <19; u++) { 
+          departmentId() ;
+          matlissueid(dataa13[u][1]);
+          matlissueStartNo(dataa13[u][2]);
+          matlissueDisc(dataa13[u][3]);
+          add2();
+	      }  
+           
+          
+	      String[][] dataa14 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=21;u <29; u++) { 
+          departmentId() ;
+          sprmatlissueid(dataa14[u][1]);
+          sprmatlissueStartNo(dataa14[u][2]);
+          sprmatlissueDisc(dataa14[u][3]);
+          add3();
+	      } 
+	     
+	      String[][] dataa15 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=31;u <39; u++) { 
+          departmentId() ;
+          toolmatlissueid(dataa15[u][1]);
+          toolmatlissueStartNo(dataa15[u][2]);
+          toolmatlissueDisc(dataa15[u][3]);
+          add4();
+	      }
+          
+	      String[][] dataa16 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=41;u <49; u++) { 
+          departmentId() ;
+          sequenceif(dataa16[u][1]);
+          sequencestartno(dataa16[u][2]);
+          sequencedisp(dataa16[u][3]);
+          add5();
+	      }
+	      
+	      String[][] dataa17 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=51;u <59; u++) { 
+          departmentId() ;
+          regdmgmtlid(dataa17[u][1]);
+          regdmgmtlsno(dataa17[u][2]);
+          regdmgmtldis(dataa17[u][3]);
+          add();
+	      }
+        
+	   ///////////////////////////////////////////////////////////////////////////////////   
+	      String[][] dataa18 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=61;u <69; u++) { 
+          departmentId() ;
+          sprregdmgmtlid(dataa18[u][1]);
+          sprregdmgmtlsno(dataa18[u][2]);
+          sprregdmgmtldis (dataa18[u][3]);
+          add7();
+	      }
+	      
+	      String[][] dataa19 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=71;u <79; u++) { 
+          departmentId() ;
+          toolregdmgmtlid(dataa19[u][1]);
+          toolregdmgmtlsno(dataa19[u][2]);
+          toolregdmgmtldis (dataa19[u][3]);
+          add8();
+	      }
+	      
+	      String[][] dataa3 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=81;u <89; u++) { 
+          departmentId() ;
+          stockmtlid(dataa3[u][1]);
+          stockmtlidstarno(dataa3[u][2]);
+          stockmtldisc (dataa3[u][3]);
+          add9();
+	      }
+	      
+	      String[][] dataa4 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=91;u <99; u++) { 
+          departmentId() ;
+          stocsprkmtlid(dataa4[u][1]);
+          stocsprkmtlidstarno(dataa4[u][2]);
+          stocksprmtldisc (dataa4[u][3]);
+          add10();
+	      }
+
+          String[][] dataa5 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=101;u <109; u++) { 
+          departmentId() ;
+          stocsprkmtltoolid(dataa5[u][1]);
+          stocsprkmtlidstartoolno(dataa5[u][2]);
+          stocksprmtltooldisc (dataa5[u][3]);
+          add11();
+	      }
+	      
+	      String[][] dataa6 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=111;u <119; u++) { 
+          departmentId() ;
+          indentid(dataa6[u][1]);
+          indentidno(dataa6[u][2]);
+          indentiddic (dataa6[u][3]);
+          add12();
+	      }
+     
+          String[][] dataa7 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=121;u <129; u++) { 
+          departmentId() ;
+          workcnslid(dataa7[u][1]);
+          workcnslidno(dataa7[u][2]);
+          workcnsliddisc (dataa7[u][3]);
+          add13();
+	      }
+	      
+	      String[][] dataa8 = Exeldata.readDataFromExcel(13);	        
+	      for (int u=131;u <139; u++) { 
+          departmentId() ;
+          workorderid(dataa8[u][1]);
+          workorderidno(dataa8[u][2]);
+          workorderiddisc (dataa8[u][3]);
+          add14();
+	      }
+         
+       
+          String[][] data1 = Exeldata.readDataFromExcel(2);	        
+	        for (int A=1;i < data1.length; A++) {
+          
+          divisionSubdivision();
+          division(data1[A][0]);
+          SUBdivision(data1[A][1]);
+          servicestation(data1[A][2]);
+          Submit();
+	        }
+          
+          
+          String[][] data6 = Exeldata.readDataFromExcel(6);
+	        
+	      for (int q = 1; q < data6.length; q++) {
+          dicisioLocation();
+          Division(data6[q][0]);
+          SubDivision(data6[q][1]);
+          DisLocName(data6[q][2]);
+          Submit();
+	      }
+	      
+	      
+          String[][] data8 = Exeldata.readDataFromExcel(8);
+	        
+	      for (int t = 1; t < data8.length; t++) {
+          
+          distibutionshedule();
+          SheduleDivision(data8[t][0]);
+          SheduleSubDivision(data8[t][1]);
+          DistribiutionLocation(data8[t][2]);
+          DistributionShedule(data8[t][3]);
+          Submit();
+	      }
+          
+          
+            
+        
+          workpriyority();
+          workpriority(data[i][6]);
+          sbmit();
+          
+          
+       
+          
+          
+       
+          String[][] data2 = Exeldata.readDataFromExcel(3);
+	        
+	      for (int a = 1; i < data2.length; a++) {
+       	  itemcat();
+          catname(data2[a][0]);
+          sbmit();
+          
+	        }
+	        
+	       
+	        
+	  
+     
+    
+          String[][] data3 = Exeldata.readDataFromExcel(4);
+	        
+	      for (int b = 1; b < data3.length; b++) {
+          hsncode();
+          hsncodecat(data3[b][0]);
+          Hsncode(data3[b][1]);
+          sbmit();
+	        }
+       
+          
+        
+        
+      
+          String[][] data7 = Exeldata.readDataFromExcel(7);
+	        
+	      for (int w = 1; w < data7.length; w++) {  
+          item();
+          itemmastercat(data7[w][0]);
+          stocktype(data7[w][1]);
+          itemname(data7[w][2]);
+          itemdispc(data7[w][3]);
+          Submit();
+	      }
+          
+    
+        String[][] data4 = Exeldata.readDataFromExcel(5);
+	        
+	      for (int c = 1; c < data4.length; c++) {  
+          brand();
+          brandname(data4[c][0]);
+          branddet(data4[c][1]);
+          
+          sbmit();
+          
+	      }
+	      
+	     
+	      
+          String[][] data9 = Exeldata.readDataFromExcel(9);
+	        
+	      for (int p = 1; p < data9.length; p++) { 
+          unitofmesure();
+          unittype(data9[p][0]);
+          unitdisp(data9[p][1]);
+          sbmit();
+	      }
+       
+      
+     
+         
+          String[][] data10 = Exeldata.readDataFromExcel(10);
+	        
+	      for (int o = 1; o < data10.length; o++) { 
+          supplierdetails();
+          regno(data10[o][0]);
+          name(data10[o][1]);
+          gst(data10[o][2]);
+          contactno(data10[o][3]);
+          address(data10[o][4]);
+          gstno(data10[o][5]);
+          phno(data10[o][6]);
+          mail(data10[o][7]);
+          State(data10[o][8]);
+          city(data10[o][9]);
+          pincode(data10[o][10]);
+          Submit();
+	      }  
+       
+          
+          //DMA MASTER
+          String[][] data14 = Exeldata.readDataFromExcel(14);
+	        
+	      for (int o = 1; o < data14.length; o++) {
+          dmsmaster();
+          dmano(data14[o][0]);
+          dmaname(data14[o][1]);
+          submit();
+          
+	      }
+	      
+	      //LEAKAGE TYPE
+	      String[][] data15 = Exeldata.readDataFromExcel(15);
+	        
+	      for (int o = 1; o < data15.length; o++) {
+	     leakage();
+	     leakagetype(data15[o][0]);
+	     Submit();
+        }
+	      
+	   //MAINTANANCE TYPE   
+	      String[][] data16 = Exeldata.readDataFromExcel(16);
+	        
+	      for (int o = 1; o < data16.length; o++) {
+	     maintanance();
+	     maintanancetype(data16[o][0]);
+	     submit();
+        }  
+	    
+	    //MAINTANANCE ACTIVIRY
+	      String[][] data17 = Exeldata.readDataFromExcel(17);
+	        
+	      for (int o = 1; o < data17.length; o++) {
+	     maintananceActivity();
+	     maintananceActivitytype(data17[o][0]);
+	     submit();
+        }  
+	      
+	    //MAINTANANCE PERFORMANCE
+	    String[][] data18 = Exeldata.readDataFromExcel(18);
+	        
+	    for (int o = 1; o < data18.length; o++) {
+	    maintanancefreq();
+	    maintananceActivitywork(data18[o][0]);
+	    maintanancefrequency(data18[o][1]);
+	     submit();
+	    }
+	    
+	     //MAINTANANCEFrequency
+		 String[][] data19 = Exeldata.readDataFromExcel(19);
+	       
+        for (int l = 1; l < data19.length; l++) {
+        maintananceperformance();
+        maintananceperformancetype(data19[l][0]);
+	    
+	    submit();
+	     
+        }    
+      
+        //MEETER TYPE
+		 String[][] data20 = Exeldata.readDataFromExcel(20);
+	       
+       for (int l = 1; l < data20.length; l++) {
+       meetertype();
+        Metertypes(data20[l][0]);
+       Submit(); 
+	    
+       } 
+       
+   
+  
+	      
+     //MEETER MANUFATCTOR
+       String[][] data21 = Exeldata.readDataFromExcel(21);
+       
+       for (int l = 1; l < data21.length; l++) {
+       meetermanufactor();
+       manufactorname(data21[l][0]);
+       metertype(data21[l][1]);
+       meterdigit(data21[l][2]);
+       receiveddate(data21[l][3]);
+       meetermodel (data21[l][4]);
+       meeterwarrenty(data21[l][5]);
+       meetercondition (data21[l][6]);
+       Submit(); 
+	    
+       }  
+	            
+	 //PIPE MANUFACTOR
+       String[][] data22 = Exeldata.readDataFromExcel(22);
+       
+       for (int l = 1; l < data22.length; l++) {
+       pipemanufactor();
+       pipetype(data22[l][0]);
+       pipemake(data22[l][1]);
+       pipewarranty(data22[l][2]);
+       pipesize(data22[l][3]);
+       purchasedate(data22[l][4]);
+       power(data22[l][5]);
+       manufactorcontact(data22[l][6]);
+       manufactroname(data22[l][7]);
+       manufactoraddress(data22[l][8]);
+       Submit(); 
+	    
+       }
+	    
+     
+     //PUMP MANUFACTOR
+       String[][] data23 = Exeldata.readDataFromExcel(23);
+       
+       for (int l = 1; l < data23.length; l++) {
+       pumpmanufactor();
+       pumptype(data23[l][0]);
+       pumpwarranty(data23[l][1]);
+       Ppurchasedate(data23[l][2]);
+       pumpmake(data23[l][3]);
+       pumppower(data23[l][4]);
+       mancomntact(data23[l][5]);
+       manname(data23[l][6]);
+       manaddress(data23[l][7]);
+       Submit();  
+       }
+     
+	      
+      //SEAFTY PRECATION 
+   String[][] data24 = Exeldata.readDataFromExcel(24);
+       
+       for (int l = 1; l < data24.length; l++) {
+    	   seaftyprecation();
+    	   seaftuyprect(data24[l][0]);
+    	   Submit(); 
+       }
+       
+       
+      
+      //SERVICE AREA
+String[][] data25 = Exeldata.readDataFromExcel(25);
+       
+       for (int l = 1; l < data25.length; l++) {
+    	   servicearea();
+    	   sirviceareadetails(data25[l][0]);
+    	   Submit(); 
+       }
+       
+   
+       
+       //TEAM CODE
+       String[][] data26 = Exeldata.readDataFromExcel(26);
+              
+              for (int l = 1; l < data26.length; l++) {
+              teamcode();
+              teamcodename(data26[l][0]);
+              signtengname(data26[l][1]);
+              supervisername(data26[l][2]);
+           	   submit(); 
+              }
+          
+   //VEHICLE MASDTER     
+String[][] data27 = Exeldata.readDataFromExcel(27);
+              
+              for (int l = 1; l < data27.length; l++) {  
+             vehiclemaste();
+             vehicleno(data27[l][0]);
+             vehicletype(data27[l][1]);
+             rcno(data27[l][2]);
+             vehiclemodel(data27[l][3]);
+             pdate(data27[l][11]);
+             insno(data27[l][4]);
+             instype(data27[l][5]);
+             drivername(data27[l][6]);
+             drivermobno(data27[l][7]);
+             driverimei(data27[l][8]);
+             SIMNO(data27[l][9]);
+             driveradds(data27[l][10]);
+             filesss(data27[l][12]);
+             Thread.sleep(1000);
+             submit(); 
+              }
+   
+              //WARD MASTER     
+              String[][] data28 = Exeldata.readDataFromExcel(28);
+                            
+              for (int l = 1; l < data28.length; l++) {   
+              wardmaster();
+              wardno(data28[l][0]);
+              wardname(data28[l][1]);
+              submit(); 
+            }
+      
+              //WATER SOURCE     &     work Status --------------------------------------------------
+              String[][] data29 = Exeldata.readDataFromExcel(29);
+                            
+              for (int l = 1; l < data29.length; l++) {   
+              watersource();
+              Entwardname(data29[l][0]);
+              submit(); 
+              workstatus();
+              WntWorkstatus(data29[l][1]);
+              submit(); 
+              }
+              
+              
+              
+              
+              
+              
+              
+              
+              
+          AssertManagement();
+          AssertEntry();
+          
+            }
+	        
+	        
+	        driver.quit();
+	  
+
+		
+	}
+
+
+	
+
+
+	
+	  
+	
+}
+	  
